@@ -1,5 +1,8 @@
 # Docker Cheatsheet
 
+# Website
+https://docs.docker.com/get-started/
+
 ## List Docker CLI commands
 docker
 docker container --help
@@ -23,7 +26,12 @@ docker container ls -aq
 ## Create an empty file
 copy nul > file.txt
 
+## Run a Docker container with port forwarded
+` docker run -p 4000:80 mmockus/get-started:part2 `
+
+
 ## Basic Docker Commands
+### Containers
 ```
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile
 docker run -p 4000:80 friendlyhello  # Run "friendlyname" mapping port 4000 to 80
@@ -41,4 +49,15 @@ docker login             # Log in this CLI session using your Docker credentials
 docker tag <image> username/repository:tag  # Tag <image> for upload to registry
 docker push username/repository:tag            # Upload tagged image to registry
 docker run username/repository:tag                   # Run image from a registry
+```
+### Services
+```
+docker stack ls                                            # List stacks or apps
+docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
+docker service ls                 # List running services associated with an app
+docker service ps <service>                  # List tasks associated with an app
+docker inspect <task or container>                   # Inspect task or container
+docker container ls -q                                      # List container IDs
+docker stack rm <appname>                             # Tear down an application
+docker swarm leave --force      # Take down a single node swarm from the manager
 ```
