@@ -11,3 +11,6 @@ https://www.blender.org/
 
 Digital Ocean
 https://www.digitalocean.com/
+
+Python w/ Flask
+https://pythonspot.com/flask-web-app-with-python/

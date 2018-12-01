@@ -29,6 +29,9 @@ copy nul > file.txt
 ## Run a Docker container with port forwarded
 ` docker run -p 4000:80 mmockus/get-started:part2 `
 
+## Enable filesystem access
+` docker run --rm -v c:/Users:/data alpine ls /data `
+` docker run --name some-redis -v d:/data:/data -d redis redis-server --appendonly yes `
 
 ## Basic Docker Commands
 ### Containers
@@ -84,4 +87,8 @@ docker-machine ssh myvm1 "docker stack deploy -c <file> <app>"   # Deploy an app
 eval $(docker-machine env -u)     # Disconnect shell from VMs, use native docker
 docker-machine stop $(docker-machine ls -q)               # Stop all running VMs
 docker-machine rm $(docker-machine ls -q) # Delete all VMs and their disk images
+```
+### Stacks ###
+```
+
 ```
