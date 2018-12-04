@@ -14,3 +14,9 @@ https://www.digitalocean.com/
 
 Python w/ Flask
 https://pythonspot.com/flask-web-app-with-python/
+
+
+Connect Mac to remote mount
+- Open `Finder`
+- Connect to Server `⌘ Connect to Server`
+- afp://192.168.1.###
