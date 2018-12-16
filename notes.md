@@ -20,3 +20,7 @@ Connect Mac to remote mount
 - Open `Finder`
 - Connect to Server `⌘ Connect to Server`
 - afp://192.168.1.###
+
+Cannot boot to Linux on USB
+May need to use refind
+https://www.rodsbooks.com/refind/installing.html#uninstalling
